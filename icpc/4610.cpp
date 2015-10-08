@@ -43,6 +43,7 @@ int main() {
 	cin >> Z;
 	for (int zi = 1; zi <= Z; ++zi)
     cin >> S, solve();
+
 	return 0;
 }
 

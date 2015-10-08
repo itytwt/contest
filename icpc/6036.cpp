@@ -27,6 +27,7 @@ int main() {
 	ios::sync_with_stdio(false);
 	while (cin >> N)
     read(), solve();
+
 	return 0;
 }
 
