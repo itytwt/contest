@@ -39,12 +39,12 @@ void dfs2(int);
 void dfs3(int, ostringstream &);
 
 int main() {
-	ios::sync_with_stdio(false);
-	cin >> Z;
-	for (int zi = 1; zi <= Z; ++zi)
+  ios::sync_with_stdio(false);
+  cin >> Z;
+  for (int zi = 1; zi <= Z; ++zi)
     cin >> S, solve();
 
-	return 0;
+  return 0;
 }
 
 void solve() {

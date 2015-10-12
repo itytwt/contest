@@ -24,11 +24,11 @@ void read();
 void solve();
 
 int main() {
-	ios::sync_with_stdio(false);
-	while (cin >> N)
+  ios::sync_with_stdio(false);
+  while (cin >> N)
     read(), solve();
 
-	return 0;
+  return 0;
 }
 
 void read() {
