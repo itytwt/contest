@@ -26,15 +26,15 @@ int main() {
 }
 
 void read() {
-  cin >> N >> M;
-  for (int i = 0; i < M; ++i)
-    for (int j = 0; j < N; ++j)
-      cin >> V[i][j];
+	cin >> N >> M;
+	for (int i = 0; i < M; ++i)
+		for (int j = 0; j < N; ++j)
+			cin >> V[i][j];
 }
 
 void solve() {
-  vector< int > c(N, 0);
-  for (int i = 0; i < M; ++i)
-    ++c[int(max_element(&V[i][0], &V[i][N]) - &V[i][0])];
-  cout << (int(max_element(all(c)) - c.begin()) + 1) << "\n";
+	vector< int > c(N, 0);
+	for (int i = 0; i < M; ++i)
+		++c[int(max_element(&V[i][0], &V[i][N]) - &V[i][0])];
+	cout << (int(max_element(all(c)) - c.begin()) + 1) << "\n";
 }

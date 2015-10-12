@@ -24,8 +24,8 @@ int main() {
 }
 
 void solve() {
-  if (N == 1)
-    cout << "1\n";
-  else
-    cout << (M - 1 >= N - M ? M - 1 : M + 1) << "\n";
+	if (N == 1)
+		cout << "1\n";
+	else
+		cout << (M - 1 >= N - M ? M - 1 : M + 1) << "\n";
 }
