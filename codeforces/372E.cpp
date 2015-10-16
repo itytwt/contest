@@ -22,11 +22,7 @@ struct frac {
 		a = 0, b = 1;
 	}
 
-	frac(ll _a) {
-		a = _a, b = 1;
-	}
-
-	frac(ll _a, ll _b) {
+	frac(ll _a, ll _b = ll(1)) {
 		if (_b) {
 			ll g = __gcd(_a, _b);
 			a = _a / g, b = _b / g;
