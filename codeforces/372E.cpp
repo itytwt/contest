@@ -33,7 +33,7 @@ struct frac {
 			if (b < 0) b = -b, a = -a;
 		}
 		else
-			a = 1, b = 0;
+			a = (_a > 0 ? 1 : -1), b = 0;
 	}
 
 	frac operator - () const {
@@ -81,7 +81,10 @@ struct frac {
 	}
 
 	bool operator < (const frac &that) const {
-		return this->a * that.b < this->b * that.a;
+		if ((this->a ^ that.a) < 0)
+			return this->a < 0;
+		else
+			return this->a * that.b < this->b * that.a;
 	}
 
 	bool operator == (const frac &that) const {
@@ -137,7 +140,10 @@ void solve() {
 	vector< ppf > vp;
 	for (int i = 0; i < N; ++i)
 		for (int j = i + 1; j < N; ++j) {
-			vp.phb({pt[i] + pt[j], (imag(pt[i]) - imag(pt[j])) / (real(pt[i]) - real(pt[j]))});
+			if (imag(pt[j]) < imag(pt[i]))
+				vp.phb({pt[i] + pt[j], (imag(pt[i]) - imag(pt[j])) / (real(pt[i]) - real(pt[j]))});
+			else
+				vp.phb({pt[i] + pt[j], (imag(pt[j]) - imag(pt[i])) / (real(pt[j]) - real(pt[i]))});
 		}
 
 	sort(all(vp), [&] (const ppf &a, const ppf &b) -> bool {
