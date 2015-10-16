@@ -104,7 +104,7 @@ void ins_str(const string &t, TNode tree[], int &tr_cnt) {
 }
 
 void manacher(const string &s) {
-	string t = "%";
+	string t = "^";
 	int c, r;
 
 	for (int i = 0; i < sz(s); ++i)
